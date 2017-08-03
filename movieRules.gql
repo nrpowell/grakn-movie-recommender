@@ -1,0 +1,37 @@
+insert
+
+$similarInterests isa inference-rule
+lhs	{
+	(liker: $a, liked: $b) isa did-like;
+	(liker: $c, liked: $b) isa did-like;
+},
+rhs	{
+	(similar-to: $a, similar-to: $b) isa similar-interests;
+};
+
+$similarDisinterests isa inference-rule
+lhs	{
+	(disliker: $a, disliked: $b) isa didnot-like;
+	(disliker: $c, disliked: $b) isa didnot-like;
+},
+rhs	{
+	(similar-to: $a, similar-to: $b) isa similar-interests;
+};
+
+$similarMoviesLiked isa inference-rule
+lhs {
+	(liker: $a, liked: $b) isa did-like;
+	(liker: $a, liked: $c) isa did-like;
+},
+rhs {
+	(recommended-movie: $c, seen-movie: $b) isa recommendation;
+};
+
+$similarMoviesNotLiked isa inference-rule
+lhs {
+	(disliker: $a, disliked: $b) isa didnot-like;
+	(liker: $a, liked: $c) isa did-like;
+}, 
+rhs {
+	(recommended-movie: $c, seen-movie: $b) isa neg-recommendation;
+};

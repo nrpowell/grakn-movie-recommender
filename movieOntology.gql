@@ -1,0 +1,53 @@
+insert
+
+user sub entity
+	has userId
+	has aveRating
+
+	plays liker
+	plays disliker
+	plays similar-to;
+
+movie sub entity
+	has movieId
+	has title
+	has releaseYear
+	has genreBitvec
+
+	plays liked
+	plays disliked
+
+	plays recommended-movie
+	plays seen-movie;
+
+recommended-movie sub role;
+seen-movie sub role;
+recommendation sub relation
+	relates recommended-movie
+	relates seen-movie;
+
+neg-recommendation sub relation
+	relates recommended-movie
+	relates seen-movie;
+
+similar-to sub role;
+similar-interests sub relation
+	relates similar-to
+	relates similar-to;
+
+liker sub role; liked sub role;
+did-like sub relation
+	relates liker
+	relates liked;
+
+disliker sub role; disliked sub role;
+didnot-like sub relation
+	relates disliker
+	relates disliked;
+
+userId sub resource datatype string;
+aveRating sub resource datatype double;
+movieId sub resource datatype string;
+title sub resource datatype string;
+releaseYear sub resource datatype long;
+genreBitvec sub resource datatype long;
