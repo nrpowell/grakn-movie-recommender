@@ -9,11 +9,13 @@ import re
 
 _ANSI_COL_PATH = re.compile(b'\033\[[\d;]*m')
 
-_GRAQL_PATH = "/Users/nickpowell/Documents/Grakn/bin/graql.sh"
-_ONTOLOGY_PATH = "/Users/nickpowell/Documents/Recommender/movieOntology.gql"
-_RULESET_PATH = "/Users/nickpowell/Documents/Recommender/movieRules.gql"
-_MOVIES_OUTPUT_PATH = "/Users/nickpowell/Documents/Recommender/moviesinsert.gql"
-_RATINGS_OUTPUT_PATH = "/Users/nickpowell/Documents/Recommender/ratingsinsert.gql"
+""" Insert local path to graql.sh below """
+_GRAQL_PATH = "/PATH-TO-GRAKN/bin/graql.sh"
+
+_ONTOLOGY_PATH = "movieOntology.gql"
+_RULESET_PATH = "movieRules.gql"
+_MOVIES_OUTPUT_PATH = "moviesinsert.gql"
+_RATINGS_OUTPUT_PATH = "ratingsinsert.gql"
 
 ###########################################################################################
 class MovieRecommender(object):
