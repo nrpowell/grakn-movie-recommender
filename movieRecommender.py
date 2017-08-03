@@ -1,5 +1,4 @@
 from argparse import ArgumentParser
-from datetime import datetime
 from subprocess import check_output
 import csv
 import numpy as np
