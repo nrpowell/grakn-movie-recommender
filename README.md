@@ -32,7 +32,8 @@ If you have multiple versions of Python installed, you may want to specify the 2
 ```
 python2.7 ./movieRecommender.py -k insert_your_keyspace_here -d small --buildGraph
 ```
-Once you have loaded the ontology and ruleset for a particular keyspace, REMOVE the `--buildGraph` flag from your command and on every subsequent program execution that keyspace, simply use
+Once you have loaded the ontology and ruleset for a particular keyspace, REMOVE the `--buildGraph` flag from your command and on every subsequent program execution to that keyspace, simply use
 ```
 python ./movieRecommender.py -k insert_your_keyspace_here -d small
 ```
+If you try to add the ontology to a keyspace that already has the ontology loaded, you may encounter errors, especially if you have made changes to the ontology.gql file.
