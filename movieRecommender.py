@@ -178,7 +178,6 @@ class MovieRecommender(object):
 
 					""" Add the user to the graph """
 					user_id = "\"" + current_user_id + "\""
-					print("insert $x isa user has userId " + user_id + " has aveRating " + str(ave_rating) + "; ")
 					users_query += "insert $x isa user has userId " + user_id + " has aveRating " + str(ave_rating) + "; "
 
 					""" Iterate through each row in the data frame, and add rating data to the query """
@@ -203,7 +202,6 @@ class MovieRecommender(object):
 
 					user_list = []
 					current_user_id = line[0]
-					#print(current_user_id)
 
 				""" Regardless of the resolution of control flow above, we add the rating to the user list at the end"""
 				user_list.append(line)
@@ -384,7 +382,7 @@ def getUserInputs(recommender):
 	for movieId in recs.iloc[:,0]:
 		movie_info = recommender.movieDict[movieId]
 		print(movie_info[0] + " (" + movie_info[1] + ")")
-
+		
 
 ###########################################################################################
 """ Parameters passed in are the keyspace and the bool 'buildGraph' which tells the program whether to build the ontology from scratch """
