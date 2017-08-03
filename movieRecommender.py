@@ -370,7 +370,7 @@ def getUserInputs(recommender):
 			recommender.addToDicts(0, movie_id)
 		else:
 			while not (userInput == 'y' or userInput == 'Y' or userInput == 'yes' or userInput == 'Yes' or userInput == 'n' \
-				or userInput == 'N' or userInput == 'no' or userInput == 'No'):
+				or userInput == 'N' or userInput == 'no' or userInput == 'No' or userInput == '?'):
 				userInput = raw_input("Invalid input, please try again [y/n]: ")
 
 
