@@ -10,6 +10,11 @@ You will then have to go into the Grakn directory and start the Grakn shell scri
 ```
 This will allow you to make queries through the Graql shell
 
+You will need to have git's large file storage system installed on your machine. Check out https://help.github.com/articles/installing-git-large-file-storage/ for instructions on how to do so.
+
+You will also need to clone explicitly from command line (instead of using the green Clone button!)
+
+
 ## Running the program
 You will need Python 2. for this project. I cannot guarantee compatibility with Python 3.
 
