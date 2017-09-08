@@ -6,7 +6,7 @@ lhs	{
 	(liker: $c, liked: $b) isa did-like;
 },
 rhs	{
-	(similar-to: $a, similar-to: $b) isa similar-interests;
+	(similar-to: $a, similar-to: $c) isa similar-interests;
 };
 
 $similarDisinterests isa inference-rule
@@ -15,7 +15,7 @@ lhs	{
 	(disliker: $c, disliked: $b) isa didnot-like;
 },
 rhs	{
-	(similar-to: $a, similar-to: $b) isa similar-interests;
+	(similar-to: $a, similar-to: $c) isa similar-interests;
 };
 
 $similarMoviesLiked isa inference-rule
